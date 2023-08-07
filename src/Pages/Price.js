@@ -8,7 +8,7 @@ function Price() {
     const apiKey = process.env.REACT_APP_COINAPI_KEY;
     const Params = useParams();
     const {symbol} = Params;
-    const url = `http://rest.coinapi.io/v1/exchangerate/${symbol}/USD?apikey=${apiKey}`;
+    const url = `https://rest.coinapi.io/v1/exchangerate/${symbol}/USD?apikey=${apiKey}`;
     const fetchCoin = async ()=>{
         try {
             const res = await fetch(url);
