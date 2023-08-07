@@ -1,4 +1,4 @@
-import {Route,Routes} from 'react-router-dom'
+import {Route,Routes,Navigate} from 'react-router-dom'
 import Main from "./Pages/Main"
 import './App.css';
 import Currencies from './Pages/Currencies';
@@ -13,6 +13,7 @@ function App() {
         <Route path='/' element={ <Main/> }/>
         <Route path='/Currencies' element={ <Currencies/> }/>
         <Route path='/Price/:symbol' element={ <Price/> }/>
+        <Route path='*' element={ <Navigate to='/'/> }/>
       </Routes>
     </div>
   );
